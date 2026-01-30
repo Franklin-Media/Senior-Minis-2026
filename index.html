@@ -1072,11 +1072,306 @@
                 height: 95vw;
             }
         }
+
+        /* BOOKING MODAL */
+        .booking-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 10, 10, 0.95);
+            z-index: 100000;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .booking-modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: linear-gradient(135deg, var(--color-rich-black) 0%, var(--color-deep-black) 100%);
+            border: 2px solid var(--color-warm-amber);
+            border-radius: 12px;
+            max-width: 600px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 20px 80px rgba(212, 165, 116, 0.3);
+            animation: slideUp 0.4s ease;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: transparent;
+            border: none;
+            color: var(--color-warm-amber);
+            font-size: 2rem;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .modal-close:hover {
+            color: var(--color-bright-gold);
+            transform: rotate(90deg);
+        }
+
+        .modal-header {
+            padding: 3rem 3rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(212, 165, 116, 0.2);
+        }
+
+        .modal-title {
+            font-family: var(--font-display);
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 700;
+            color: var(--color-bright-gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-subtitle {
+            font-family: var(--font-serif);
+            font-size: clamp(1rem, 1.5vw, 1.2rem);
+            color: var(--color-moonlit);
+            font-style: italic;
+        }
+
+        .modal-body {
+            padding: 2.5rem 3rem;
+        }
+
+        .modal-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .modal-section-title {
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--color-warm-amber);
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-info-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .modal-info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.2rem;
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--color-cream);
+        }
+
+        .modal-info-icon {
+            color: var(--color-warm-amber);
+            margin-right: 1rem;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            margin-top: 0.2rem;
+        }
+
+        .modal-steps-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            counter-reset: step-counter;
+        }
+
+        .modal-step-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.2rem;
+            font-family: var(--font-sans);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--color-cream);
+            counter-increment: step-counter;
+        }
+
+        .modal-step-item::before {
+            content: counter(step-counter);
+            background: var(--color-warm-amber);
+            color: var(--color-deep-black);
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+
+        .modal-footer {
+            padding: 2rem 3rem 3rem;
+            text-align: center;
+        }
+
+        .modal-cta {
+            display: inline-block;
+            width: 100%;
+            padding: 1.3rem 2rem;
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: var(--color-deep-black);
+            background: linear-gradient(135deg, var(--color-bright-gold), var(--color-warm-amber));
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(212, 165, 116, 0.3);
+            border-radius: 4px;
+        }
+
+        .modal-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(212, 165, 116, 0.5);
+        }
+
+        .modal-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .modal-cta:hover::before {
+            left: 100%;
+        }
+
+        .modal-note {
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--color-moonlit);
+            margin-top: 1.5rem;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .modal-content {
+                max-height: 95vh;
+                border-radius: 8px;
+            }
+
+            .modal-header,
+            .modal-body,
+            .modal-footer {
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+
+            .modal-close {
+                top: 1rem;
+                right: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
     <!-- Sticky Floating CTA -->
-    <a href="#book-session" class="sticky-cta" id="stickyCta">Book Session</a>
+    <a href="#" class="sticky-cta" id="stickyCta">Book Session</a>
+
+    <!-- BOOKING MODAL -->
+    <div class="booking-modal" id="bookingModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+
+            <div class="modal-header">
+                <h2 class="modal-title">The Graduate</h2>
+                <p class="modal-subtitle">You're almost there!</p>
+            </div>
+
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3 class="modal-section-title">What's Included:</h3>
+                    <ul class="modal-info-list">
+                        <li class="modal-info-item">
+                            <span class="modal-info-icon">⏱</span>
+                            <span>15-minute session</span>
+                        </li>
+                        <li class="modal-info-item">
+                            <span class="modal-info-icon">📸</span>
+                            <span>15 professionally edited photos</span>
+                        </li>
+                        <li class="modal-info-item">
+                            <span class="modal-info-icon">📅</span>
+                            <span>Available: February 21-22, 2026</span>
+                        </li>
+                        <li class="modal-info-item">
+                            <span class="modal-info-icon">📍</span>
+                            <span>F+R Media Collective<br>111 W. 5th St., Elk City, OK</span>
+                        </li>
+                        <li class="modal-info-item">
+                            <span class="modal-info-icon">💰</span>
+                            <span>$65 (paid in full at booking)</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3 class="modal-section-title">What happens next:</h3>
+                    <ul class="modal-steps-list">
+                        <li class="modal-step-item">You'll be redirected to our secure booking system</li>
+                        <li class="modal-step-item">Select your preferred time slot from available options</li>
+                        <li class="modal-step-item">Complete your secure payment ($65)</li>
+                        <li class="modal-step-item">Receive instant confirmation via email</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <a href="https://api.leadconnectorhq.com/widget/booking/1vQucBhsNhCCoUVkxqGz" class="modal-cta" id="continueBooking">Continue to Secure Booking</a>
+                <p class="modal-note">Note: Sessions are non-refundable. Paid in full at booking.</p>
+            </div>
+        </div>
+    </div>
 
     <!-- ACT ONE: THE PREMIERE -->
     <section class="hero" data-parallax="0.5">
@@ -1212,7 +1507,7 @@
             </div>
 
             <!-- Replace href with your actual booking link -->
-            <a href="#book-now" class="cta-button">Reserve Your Session</a>
+            <a href="#" class="cta-button" id="openModalBtn">Reserve Your Session</a>
         </div>
     </section>
 
@@ -1481,6 +1776,54 @@
                     icon.textContent = '−';
                 }
             });
+        });
+
+        // Booking Modal (Act III button and Sticky CTA)
+        const bookingModal = document.getElementById('bookingModal');
+        const modalClose = document.getElementById('modalClose');
+        const openModalBtn = document.getElementById('openModalBtn');
+        const stickyCta = document.getElementById('stickyCta');
+
+        // Open modal
+        function openModal(e) {
+            e.preventDefault();
+            bookingModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Close modal
+        function closeModal() {
+            bookingModal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Attach event listener to Act III button
+        if (openModalBtn) {
+            openModalBtn.addEventListener('click', openModal);
+        }
+
+        // Attach event listener to Sticky floating CTA
+        if (stickyCta) {
+            stickyCta.addEventListener('click', openModal);
+        }
+
+        // Close button
+        if (modalClose) {
+            modalClose.addEventListener('click', closeModal);
+        }
+
+        // Close on outside click
+        bookingModal.addEventListener('click', (e) => {
+            if (e.target === bookingModal) {
+                closeModal();
+            }
+        });
+
+        // Close on ESC key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && bookingModal.classList.contains('active')) {
+                closeModal();
+            }
         });
     </script>
 </body>
