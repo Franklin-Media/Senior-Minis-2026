@@ -144,7 +144,7 @@
             color: var(--color-warm-amber);
             margin-bottom: 3rem;
             opacity: 0;
-            animation: fadeInUp 1.2s ease-out 0.3s forwards;
+            animation: fadeInUp 0.8s ease-out 0.1s forwards;
             font-weight: 300;
         }
 
@@ -160,7 +160,7 @@
             background-clip: text;
             text-shadow: 0 0 80px rgba(212, 165, 116, 0.3);
             opacity: 0;
-            animation: fadeInScale 1.5s ease-out 0.8s forwards;
+            animation: fadeInScale 1s ease-out 0.3s forwards;
             position: relative;
         }
 
@@ -174,7 +174,7 @@
             height: 2px;
             background: linear-gradient(90deg, transparent, var(--color-warm-amber), transparent);
             opacity: 0;
-            animation: fadeIn 1s ease-out 2s forwards;
+            animation: fadeIn 0.8s ease-out 0.8s forwards;
         }
 
         .tagline {
@@ -185,7 +185,7 @@
             margin-top: 4rem;
             color: var(--color-moonlit);
             opacity: 0;
-            animation: fadeInUp 1.2s ease-out 2.2s forwards;
+            animation: fadeInUp 0.8s ease-out 1s forwards;
             font-style: italic;
         }
 
@@ -196,7 +196,7 @@
             letter-spacing: 0.08em;
             text-transform: uppercase;
             opacity: 0;
-            animation: fadeInUp 1.2s ease-out 2.6s forwards;
+            animation: fadeInUp 0.8s ease-out 1.2s forwards;
             color: var(--color-cream);
             font-weight: 300;
         }
@@ -219,7 +219,7 @@
             overflow: hidden;
             transition: all 0.4s ease;
             opacity: 0;
-            animation: fadeInUp 1.2s ease-out 3s forwards;
+            animation: fadeInUp 0.8s ease-out 1.4s forwards;
             backdrop-filter: blur(10px);
         }
 
@@ -296,7 +296,7 @@
             left: 50%;
             transform: translateX(-50%);
             opacity: 0;
-            animation: fadeIn 1s ease-out 3s forwards, float 2s ease-in-out infinite 3s;
+            animation: fadeIn 0.8s ease-out 1.6s forwards, float 2s ease-in-out infinite 1.6s;
         }
 
         .scroll-indicator::before {
@@ -319,7 +319,7 @@
         /* ACT TWO - VIDEO FEATURE */
         .video-section {
             position: relative;
-            padding: 8rem 2rem;
+            padding: 5rem 2rem;
             border-top: 1px solid rgba(212, 165, 116, 0.2);
             border-bottom: 1px solid rgba(212, 165, 116, 0.2);
             overflow: hidden;
@@ -339,7 +339,7 @@
             margin-bottom: 4rem;
             opacity: 0;
             transform: translateY(30px);
-            transition: all 1s ease;
+            transition: all 0.6s ease;
         }
 
         .section-label.visible {
@@ -353,7 +353,7 @@
             position: relative;
             opacity: 0;
             transform: translateY(50px);
-            transition: all 1.2s ease;
+            transition: all 0.7s ease;
         }
 
         .video-container.visible {
@@ -393,7 +393,7 @@
 
         /* ACT TWO - GALLERY */
         .gallery-section {
-            padding: 8rem 2rem;
+            padding: 5rem 2rem;
             position: relative;
             overflow: hidden;
         }
@@ -491,7 +491,7 @@
             border: 3px solid rgba(212, 165, 116, 0.4);
             opacity: 0;
             transform: translateY(50px) rotate(0deg);
-            transition: all 0.8s ease;
+            transition: all 0.5s ease;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
 
@@ -504,47 +504,47 @@
         .gallery-item:nth-child(1) {
             grid-column: span 4;
             grid-row: span 4;
-            transition-delay: 0.1s;
+            transition-delay: 0.05s;
         }
         .gallery-item:nth-child(2) {
             grid-column: span 5;
             grid-row: span 3;
-            transition-delay: 0.2s;
+            transition-delay: 0.1s;
         }
         .gallery-item:nth-child(3) {
             grid-column: span 3;
             grid-row: span 4;
-            transition-delay: 0.3s;
+            transition-delay: 0.15s;
         }
         .gallery-item:nth-child(4) {
             grid-column: span 4;
             grid-row: span 3;
-            transition-delay: 0.4s;
+            transition-delay: 0.2s;
         }
         .gallery-item:nth-child(5) {
             grid-column: span 5;
             grid-row: span 4;
-            transition-delay: 0.5s;
+            transition-delay: 0.25s;
         }
         .gallery-item:nth-child(6) {
             grid-column: span 3;
             grid-row: span 3;
-            transition-delay: 0.6s;
+            transition-delay: 0.3s;
         }
         .gallery-item:nth-child(7) {
             grid-column: span 5;
             grid-row: span 4;
-            transition-delay: 0.7s;
+            transition-delay: 0.35s;
         }
         .gallery-item:nth-child(8) {
             grid-column: span 4;
             grid-row: span 3;
-            transition-delay: 0.8s;
+            transition-delay: 0.4s;
         }
         .gallery-item:nth-child(9) {
             grid-column: span 3;
             grid-row: span 4;
-            transition-delay: 0.9s;
+            transition-delay: 0.45s;
         }
 
         .gallery-item img {
@@ -580,7 +580,7 @@
 
         /* ACT THREE - BOOKING SECTION */
         .booking-section {
-            padding: 8rem 2rem 10rem;
+            padding: 5rem 2rem 6rem;
             background: var(--color-deep-black);
             position: relative;
             overflow: hidden;
@@ -632,7 +632,7 @@
             margin-bottom: 4rem;
             opacity: 0;
             transform: translateY(30px);
-            transition: all 1s ease 0.2s;
+            transition: all 0.6s ease 0.1s;
         }
 
         .booking-details.visible {
@@ -665,12 +665,12 @@
             color: var(--color-bright-gold);
             font-weight: 700;
             display: block;
-            margin: 2rem 0 1rem;
+            margin: 2rem 0 0.5rem;
         }
 
         .cta-button {
             display: inline-block;
-            margin-top: 1.5rem;
+            margin-top: 1rem;
             padding: 1.5rem 4rem;
             font-family: var(--font-sans);
             font-size: clamp(1rem, 1.5vw, 1.2rem);
@@ -693,7 +693,7 @@
         .cta-button.visible {
             opacity: 1;
             transform: translateY(0);
-            transition: all 1s ease 0.4s;
+            transition: all 0.6s ease 0.1s;
         }
 
         .cta-button::before {
@@ -772,104 +772,6 @@
                 opacity: 0.3;
                 transform: scale(1.1);
             }
-        }
-
-        /* FAQ SECTION */
-        .faq-section {
-            padding: 8rem 2rem;
-            background: linear-gradient(180deg, var(--color-deep-black) 0%, var(--color-rich-black) 50%, var(--color-deep-black) 100%);
-            border-top: 1px solid rgba(212, 165, 116, 0.2);
-        }
-
-        .faq-container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .faq-title {
-            font-family: var(--font-display);
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            font-weight: 700;
-            letter-spacing: 0.05em;
-            color: var(--color-bright-gold);
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .faq-item {
-            border-bottom: 1px solid rgba(212, 165, 116, 0.2);
-            margin-bottom: 0;
-        }
-
-        .faq-question {
-            width: 100%;
-            padding: 2rem 0;
-            font-family: var(--font-sans);
-            font-size: clamp(1rem, 1.8vw, 1.3rem);
-            font-weight: 500;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            text-align: left;
-            color: var(--color-warm-amber);
-            background: none;
-            border: none;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: color 0.3s ease;
-        }
-
-        .faq-question:hover {
-            color: var(--color-bright-gold);
-        }
-
-        .faq-icon {
-            font-size: 1.5rem;
-            transition: transform 0.3s ease;
-            flex-shrink: 0;
-            margin-left: 1rem;
-        }
-
-        .faq-item.active .faq-icon {
-            transform: rotate(180deg);
-        }
-
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease, padding 0.4s ease;
-        }
-
-        .faq-item.active .faq-answer {
-            max-height: 500px;
-            padding-bottom: 2rem;
-        }
-
-        .faq-answer-content {
-            font-family: var(--font-sans);
-            font-size: clamp(0.95rem, 1.5vw, 1.1rem);
-            line-height: 1.8;
-            color: var(--color-cream);
-            padding-left: 1rem;
-        }
-
-        .faq-answer-content ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .faq-answer-content li {
-            padding: 0.5rem 0;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-
-        .faq-answer-content li::before {
-            content: '—';
-            position: absolute;
-            left: 0;
-            color: var(--color-warm-amber);
         }
 
         /* ACT FOUR - FOOTER */
@@ -1100,7 +1002,8 @@
             border-radius: 12px;
             max-width: 600px;
             width: 100%;
-            max-height: 90vh;
+            max-height: 85vh;
+            margin: auto;
             overflow-y: auto;
             position: relative;
             box-shadow: 0 20px 80px rgba(212, 165, 116, 0.3);
@@ -1342,7 +1245,7 @@
                         </li>
                         <li class="modal-info-item">
                             <span class="modal-info-icon">📅</span>
-                            <span>Available: February 21-22, 2026</span>
+                            <span>February 21-22, 2026</span>
                         </li>
                         <li class="modal-info-item">
                             <span class="modal-info-icon">📍</span>
@@ -1447,28 +1350,28 @@
                     <img src="images/1.jpg" alt="Graduate Portrait 1" fetchpriority="high">
                 </div>
                 <div class="gallery-item">
-                    <img src="images/2.jpg" alt="Graduate Portrait 2" loading="lazy">
+                    <img src="images/2.jpg" alt="Graduate Portrait 2" loading="eager">
                 </div>
                 <div class="gallery-item">
-                    <img src="images/3.jpg" alt="Graduate Portrait 3" loading="lazy">
+                    <img src="images/3.jpg" alt="Graduate Portrait 3" loading="eager">
                 </div>
                 <div class="gallery-item">
-                    <img src="images/4.jpg" alt="Graduate Portrait 4" loading="lazy">
+                    <img src="images/4.jpg" alt="Graduate Portrait 4" loading="eager">
                 </div>
                 <div class="gallery-item">
-                    <img src="images/5.jpg" alt="Graduate Portrait 5" loading="lazy">
+                    <img src="images/5.jpg" alt="Graduate Portrait 5" loading="eager">
                 </div>
                 <div class="gallery-item">
-                    <img src="images/6.jpg" alt="Graduate Portrait 6" loading="lazy">
+                    <img src="images/6.jpg" alt="Graduate Portrait 6" loading="eager">
                 </div>
                 <div class="gallery-item">
-                    <img src="images/7.jpg" alt="Graduate Portrait 7" loading="lazy">
+                    <img src="images/7.jpg" alt="Graduate Portrait 7" loading="eager">
                 </div>
                 <div class="gallery-item">
-                    <img src="images/8.jpg" alt="Graduate Portrait 8" loading="lazy">
+                    <img src="images/8.jpg" alt="Graduate Portrait 8" loading="eager">
                 </div>
                 <div class="gallery-item">
-                    <img src="images/9.jpg" alt="Graduate Portrait 9" loading="lazy">
+                    <img src="images/9.jpg" alt="Graduate Portrait 9" loading="eager">
                 </div>
             </div>
             <div class="swipe-counter" id="swipeCounter">1 / 9</div>
@@ -1508,81 +1411,6 @@
 
             <!-- Replace href with your actual booking link -->
             <a href="#" class="cta-button" id="openModalBtn">Reserve Your Session</a>
-        </div>
-    </section>
-
-    <!-- FAQ SECTION -->
-    <section class="faq-section">
-        <div class="faq-container">
-            <h2 class="faq-title">Frequently Asked Questions</h2>
-
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    What should I wear?
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        <ul>
-                            <li>Solid colors or subtle patterns work best on camera</li>
-                            <li>Bring 2-3 outfit options if desired for variety</li>
-                            <li>Professional and casual combinations recommended</li>
-                            <li>Avoid large logos or distracting graphics</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    What happens during the session?
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        <ul>
-                            <li>15-minute session with multiple poses and angles</li>
-                            <li>Professional studio lighting and cinematic backdrops</li>
-                            <li>Expert guidance and direction throughout</li>
-                            <li>10-15 professionally edited digital images included</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    What about booking & payment?
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        <ul>
-                            <li>Full payment of $65 due at booking to reserve your time slot</li>
-                            <li>Cancellations 48+ hours in advance receive full refund</li>
-                            <li>Reschedule once free of charge, subject to availability</li>
-                            <li>Secure online payment processing for your protection</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    When will I receive my photos?
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        <ul>
-                            <li>Photos delivered within 7-10 business days after your session</li>
-                            <li>High-resolution digital downloads via secure online gallery</li>
-                            <li>Both print-ready and web-optimized versions included</li>
-                            <li>Lifetime access to your personalized online gallery</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -1749,34 +1577,6 @@
                 updateSwipeCounter(); // Initial call
             }
         }
-
-        // FAQ Accordion
-        const faqItems = document.querySelectorAll('.faq-item');
-        const faqQuestions = document.querySelectorAll('.faq-question');
-
-        faqQuestions.forEach((question, index) => {
-            question.addEventListener('click', () => {
-                const currentItem = faqItems[index];
-                const isActive = currentItem.classList.contains('active');
-
-                // Close all items
-                faqItems.forEach(item => {
-                    item.classList.remove('active');
-                    const btn = item.querySelector('.faq-question');
-                    const icon = item.querySelector('.faq-icon');
-                    btn.setAttribute('aria-expanded', 'false');
-                    icon.textContent = '+';
-                });
-
-                // If the clicked item wasn't active, open it
-                if (!isActive) {
-                    currentItem.classList.add('active');
-                    question.setAttribute('aria-expanded', 'true');
-                    const icon = currentItem.querySelector('.faq-icon');
-                    icon.textContent = '−';
-                }
-            });
-        });
 
         // Booking Modal (Act III button and Sticky CTA)
         const bookingModal = document.getElementById('bookingModal');
